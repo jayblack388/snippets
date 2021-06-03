@@ -94,9 +94,9 @@
       "import { useState } from 'react';",
       "",
       "export const useComponentLogic = (props) => {",
-      "\tconst [state, setState] = useState(props)",
+      "\tconst [${1:state}, ${2:setState}] = useState(props)",
       "",
-      "\treturn { state }",
+      "\treturn { ${1:state} }",
       "}",
       ""
     ],
