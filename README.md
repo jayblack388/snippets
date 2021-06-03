@@ -35,10 +35,10 @@ Within the related `.code-snippets` file (you can always add more of these files
       // TM_DIRECTORY gets the current path, the regex gets just the parent directory
     ],
     "description": "A description of what the snippet does",
-    // prefix defines the key combination to trigger the snippet
     "prefix": "nsk",
-    // a comma seperated string of any language where this snippet could trigger
-    "scope": "javascript"
+    // prefix defines the key combination to trigger the snippet
+    "scope": "javascript,typescript"
+    // scope is a comma seperated string of any language where this snippet could trigger
   }
 }
 ```
