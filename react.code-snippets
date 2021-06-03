@@ -1,6 +1,5 @@
 {
-  "reactArrowFunctionComponentExport": {
-    "prefix": "rafce",
+  "React Arrow Function Component with Export": {
     "body": [
       "import React from 'react'",
       "",
@@ -15,10 +14,11 @@
       "export default ${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}}",
       ""
     ],
-    "description": "Creates a React Arrow Function Component with ES7 module system"
+    "description": "Creates a React Arrow Function Component with ES7 module system",
+    "prefix": "rafce",
+    "scope": "javascript,typescript"
   },
-  "reactArrowFunctionComponentExportTypeScript": {
-    "prefix": "rafcets",
+  "Typescript Arrow Function Component with Export": {
     "body": [
       "import React, { FC } from 'react'",
       "",
@@ -36,10 +36,11 @@
       "export default ${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}}",
       ""
     ],
-    "description": "Creates a React Arrow Function Component with "
+    "description": "Creates a React Arrow Function Component with Typescript",
+    "prefix": "rafcets",
+    "scope": "typescript"
   },
-  "reactTestingLibrarySimple": {
-    "prefix": "rtls",
+  "React Testing Library Simple": {
     "body": [
       "import React from 'react';",
       "import { render, cleanup } from '@testing-library/react';",
@@ -54,10 +55,11 @@
       "});",
       ""
     ],
-    "description": "Creates a simple test for @testing-library/react"
+    "description": "Creates a simple test for @testing-library/react",
+    "prefix": "rtls",
+    "scope": "javascript,typescript"
   },
-  "reactTestRendererSimple": {
-    "prefix": "rtrs",
+  "React Test Renderer Simple": {
     "body": [
       "import React from \"react\";",
       "import { create } from \"react-test-renderer\";",
@@ -66,21 +68,23 @@
       "const mockedComponent = props => create(<${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}} {...props} />);",
       "",
       "describe(\"${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}}\", () => {",
-      "  test(\"renders component\", () => {",
-      "    const component = mockedComponent();",
-      "",
-      "    expect(component).toMatchSnapshot();",
-      "  });",
-      "});",
-      ""
-    ],
-    "description": "Creates a simple test for react-test-renderer"
+        "  test(\"renders component\", () => {",
+        "    const component = mockedComponent();",
+        "",
+        "    expect(component).toMatchSnapshot();",
+        "  });",
+        "});",
+        ""
+      ],
+      "description": "Creates a simple test for react-test-renderer",
+      "prefix": "rtrs",
+      "scope": "javascript,typescript"
   },
-  "styled-component": {
+  "Styled Component Simple": {
     "body": [
       "import styled from 'styled-components';",
       "",
-      "export const ${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}} = styled.div`",
+      "export const ${1:${TM_DIRECTORY/^.+\\/(.*)$/$1/}} = styled.${2:div}`",
       "\t",
       "`",
       ""
@@ -89,11 +93,11 @@
     "prefix": "stc",
     "scope": "javascript,typescript"
   },
-  "useComponentLogic": {
+  "Basic Custom Hook": {
     "body": [
       "import { useState } from 'react';",
       "",
-      "export const useComponentLogic = (props) => {",
+      "export const use${0:ComponentLogic }= (props) => {",
       "\tconst [${1:state}, ${2:setState}] = useState(props)",
       "",
       "\treturn { ${1:state} }",
